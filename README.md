@@ -10,5 +10,6 @@ First project !
 
 <p>If you have any questions or concerns, please reach out either on Canvas or email. Good luck!</p>
 <p>
-  <img src="https://user-images.githubusercontent.com/113963568/211444515-b35cdc53-6909-48b6-97b9-c2fbbd613539.png"  width="500" height="300" />
+  <img src="https://user-images.githubusercontent.com/113963568/192659516-ed63e501-615e-46bb-9ca4-2e8fd1d20163.gif" alt="Meme from GitHub" width="300" height="300" />
 </p>
+
