@@ -4,7 +4,8 @@
 
 ## Purpose
 
-First homework of the quarter to ensure that my program is running correctly. 
+First project ! 
+(This area can be use to add explanation to how our code is working, issues and what resoruces we use) 
 
 
 <p>If you have any questions or concerns, please reach out either on Canvas or email. Good luck!</p>
