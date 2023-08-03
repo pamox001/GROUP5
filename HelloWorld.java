@@ -1,5 +1,4 @@
-//27SEP2022 
-//Andrea Pamo
+
 //Assigment: HelloWorld 
 
 public class HelloWorld{
