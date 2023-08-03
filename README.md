@@ -5,7 +5,7 @@
 ## Purpose
 
 First project ! 
-(This area can be use to add explanation to how our code is working, issues and what resoruces we use) 
+(This area can be use to explained how our code is working, issues and what resources we are using) 
 
 
 <p>If you have any questions or concerns, please reach out either on Canvas or email. Good luck!</p>
