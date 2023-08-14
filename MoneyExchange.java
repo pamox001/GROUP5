@@ -6,9 +6,9 @@ public class MoneyExchange{
   Scanner console= new Scanner(new File("USD.txt"));
 
   while(true){
-    System.out.println(" Hi! What currency would you like to exchange today, you can choose USD, EUR or JPY ?");
+    System.out.println(" Hi! What currency would you like to exchange today, you can choose USD, EUR, GBP or JPY ?");
     Scanner scanner=new Scanner(System.in);
-    System.out.println(" Do you want to exchange it 1-USD, 2-EUR, 3-JPY or 4-All?");  
+    System.out.println(" Do you want to exchange it 1-USD, 2-EUR, 3-GBP, 4-JPY or 5-All?");  
     int currency= new Scanner(System.in);
     System.out.println(" How much would you like to exchange today? ");    
     double amount= new Scanner(System.in);
@@ -19,6 +19,8 @@ public class MoneyExchange{
       exEUR(console,  currency, amount);
     }else if(choice.equals("JPY")){
       exJPY(console,  currency, amount);
+     }else if(choice.equals("GBP")){
+      exGBP(console,  currency, amount);
     }else{
       System.out.println(" Please input a valid choice!")
     }
@@ -39,6 +41,9 @@ public class MoneyExchange{
 
     public static void exEUR(Scanner console, int currency, double amount){
    
+    }
+    public static void exGBP(Scanner console, int currency, double amount){
+      
     }
 
     public static void exJPY(Scanner console, int currency, double amount){
