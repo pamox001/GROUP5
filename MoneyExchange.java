@@ -60,20 +60,86 @@ public class MoneyExchange{
 		}else if(currency==4){
 		System.out.println("USD to JPY: "+ d);
 		} else {
-		System.out.println("USD to EUR: "+ p+"  GBD: "+ n+"  JPY: "+d);
+		System.out.println("USD to EUR: "+ p+"  GBP: "+ n+"  JPY: "+d);
 		}
 	}
    }
 
     public static void exEUR(Scanner console, int currency, double amount){
-   
+   	double p;
+	double n;
+	double d;
+	while (console.hasNext()) {
+		String coin = console.next();
+		double count= console.nextDouble();
+		if(coin.equals("EUR")){
+			p=(amount*count);	//0.91	
+		}else if (coin.equals("GBP")) {
+			n = (amount*count); //0.78
+		} else if (coin.equals("JPN")) {
+			d =(amount*count); //142.48
+		}
+		if(currency==1){
+		System.out.println("EUR to USD: "+ p);
+		}else if(currency==3){
+		System.out.println("EUR to GBP: "+ n);
+		}else if(currency==4){
+		System.out.println("EUR to JPY: "+ d);
+		} else {
+		System.out.println("EUR to USD: "+ p+"  GBP: "+ n+"  JPY: "+d);
+		}
+	}
     }
     public static void exGBP(Scanner console, int currency, double amount){
-      
+    	double p;
+	double n;
+	double d;
+	while (console.hasNext()) {
+		String coin = console.next();
+		double count= console.nextDouble();
+		if(coin.equals("EUR")){
+			p=(amount*count);	//0.91	
+		}else if (coin.equals("GBP")) {
+			n = (amount*count); //0.78
+		} else if (coin.equals("JPN")) {
+			d =(amount*count); //142.48
+		}
+		if(currency==1){
+		System.out.println("GBP to USD: "+ p);
+		}else if(currency==2){
+		System.out.println("GBP to EUR: "+ n);
+		}else if(currency==4){
+		System.out.println("GBP to JPY: "+ d);
+		} else {
+		System.out.println("GBP to USD: "+ p+"  EUR: "+ n+"  JPY: "+d);
+		}
+	}  
     }
 
     public static void exJPY(Scanner console, int currency, double amount){
-      
+  	double p;
+	double n;
+	double d;
+	while (console.hasNext()) {
+		String coin = console.next();
+		double count= console.nextDouble();
+		if(coin.equals("EUR")){
+			p=(amount*count);	//0.91	
+		}else if (coin.equals("GBP")) {
+			n = (amount*count); //0.78
+		} else if (coin.equals("JPN")) {
+			d =(amount*count); //142.48
+		}
+		if(currency==4){
+		System.out.println("JPY to USD: "+ p);
+		}else if(currency==2){
+		System.out.println("JPY to EUR: "+ n);
+		}else if(currency==3){
+		System.out.println("JPY to GBP: "+ d);
+		} else {
+		System.out.println("JPY to USD: "+ p+"  EUR: "+ n+"  GBP: "+d);
+		}
+	}    
     }
 }
   
