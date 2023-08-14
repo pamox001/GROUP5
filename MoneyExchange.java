@@ -69,15 +69,18 @@ public class MoneyExchange{
    	double p;
 	double n;
 	double d;
+	double x;
 	while (console.hasNext()) {
 		String coin = console.next();
 		double count= console.nextDouble();
 		if(coin.equals("EUR")){
-			p=(amount*count);	//0.91	
-		}else if (coin.equals("GBP")) {
-			n = (amount*count); //0.78
-		} else if (coin.equals("JPN")) {
-			d =(amount*count); //142.48
+			x=(1/count);
+			p=(amount*x);	//0.91	
+			if (coin.equals("GBP")){
+				n = (amount*count*x); //0.78
+			} else if (coin.equals("JPN")) {
+				d =(amount*count*x); //142.48
+			}
 		}
 		if(currency==1){
 		System.out.println("EUR to USD: "+ p);
@@ -130,7 +133,7 @@ public class MoneyExchange{
 		} else if (coin.equals("JPN")) {
 			d =(amount*count); //142.48
 		}
-		if(currency==4){
+		if(currency==1){
 		System.out.println("JPY to USD: "+ p);
 		}else if(currency==2){
 		System.out.println("JPY to EUR: "+ n);
