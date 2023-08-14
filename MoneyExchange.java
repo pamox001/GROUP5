@@ -3,17 +3,20 @@ import java.io.*;
 import java.util.Scanner;
 
 public class MoneyExchange{
-  public static vois main(String[] args) throws FileNotFoundException{
+  public static void main(String[] args) throws FileNotFoundException{
   Scanner console= new Scanner(new File("USD.txt"));
-
-  while(true){
+	int x=0;
+  do{
+	 Scanner scanner=new Scanner(System.in);
+	 Scanner opt=new Scanner(System.in);
+	 
     System.out.println(" Hi! What currency would you like to exchange today, you can choose USD, EUR, GBP or JPY ?");
-    Scanner scanner=new Scanner(System.in);
-    System.out.println(" Do you want to exchange it 1-USD, 2-EUR, 3-GBP, 4-JPY or 5-All?");  
-    int currency= new Scanner(System.in);
-    System.out.println(" How much would you like to exchange today? ");    
-    double amount= new Scanner(System.in);
     String choice=scanner.nextLine();
+    System.out.println(" Do you want to exchange it 1-USD, 2-EUR, 3-GBP, 4-JPY or 5-All?");  
+	int currency=opt.nextInt();  
+	System.out.println(" How much would you like to exchange today? ");    
+    double amount= opt.nextDouble();
+   // amount= new Scanner(System.in);
     if(choice.equals("USD")){
       exUSD(console,  currency, amount);
     }else if(choice.equals("EUR")){
@@ -23,18 +26,17 @@ public class MoneyExchange{
      }else if(choice.equals("GBP")){
       exGBP(console,  currency, amount);
     }else{
-      System.out.println(" Please input a valid choice!")
+      System.out.println(" Please input a valid choice!");
     }
     
     System.out.println("Do you want exchange money again? Y or N");
-      Scanner go=new Scanner(System.in);
+      String go =opt.nextLine(); 
         if(go.equals("Y")){
-          go=true;
+          x=1;
         }else{
-          go=false;
+          x=0;
         }
-        return go;
-    }
+    }while(x==1);
   }
    public static void exUSD(Scanner console, int currency, double amount){
  
@@ -50,7 +52,6 @@ public class MoneyExchange{
     public static void exJPY(Scanner console, int currency, double amount){
       
     }
-
-
+}
   
     
