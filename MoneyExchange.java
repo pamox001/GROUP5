@@ -11,7 +11,7 @@ public class MoneyExchange{
     System.out.println(" Do you want to exchange it 1-USD, 2-EUR, 3-JPY or 4-All?");  
     int currency= new Scanner(System.in);
     System.out.println(" How much would you like to exchange today? ");    
-    int amount= new Scanner(System.in);
+    double amount= new Scanner(System.in);
     String choice=scanner.nextLine();
     if(choice.equals("USD")){
       exUSD(console,  currency, amount);
