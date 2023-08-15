@@ -75,11 +75,11 @@ public class MoneyExchange{
 		double count= console.nextDouble();
 		if(coin.equals("EUR")){
 			x=(1/count);
-			p=(amount*x);	//0.91	
+			p=(amount*x);	//1.10	
 			if (coin.equals("GBP")){
-				n = (amount*count*x); //0.78
+				n = (amount*count*x); //0.86
 			} else if (coin.equals("JPN")) {
-				d =(amount*count*x); //142.48
+				d =(amount*count*x); //156.74
 			}
 		}
 		if(currency==1){
@@ -101,13 +101,13 @@ public class MoneyExchange{
 	while (console.hasNext()) {
 		String coin = console.next();
 		double count= console.nextDouble();
-		if(coin.equals("EUR")){
+		if(coin.equals("GBP")){
 			x=(1/count);
-			p=(amount*x);	//0.91	
-			if (coin.equals("GBP")){
-				n = (amount*count*x); //0.78
-			} else if (coin.equals("JPN")) {
-				d =(amount*count*x); //142.48
+			p=(amount*x);	//1.27	
+			if (coin.equals("EUR")){
+				n = (amount*count*x); //1.16
+			} else if (coin.equals("JPY")) {
+				d =(amount*count*x); //182.85
 			}
 		}	
 		if(currency==1){
@@ -129,13 +129,13 @@ public class MoneyExchange{
 	while (console.hasNext()) {
 		String coin = console.next();
 		double count= console.nextDouble();
-		if(coin.equals("EUR")){
+		if(coin.equals("JPY")){
 			x=(1/count);
-			p=(amount*x);	//0.91	
-			if (coin.equals("GBP")){
-				n = (amount*count*x); //0.78
-			} else if (coin.equals("JPN")) {
-				d =(amount*count*x); //142.48
+			p=(amount*x);	//0.007
+			if (coin.equals("EUR")){
+				n = (amount*count*x); //0.0064
+			} else if (coin.equals("GBP")) {
+				d =(amount*count*x); //0.0055
 			}
 		}	
 		if(currency==1){
