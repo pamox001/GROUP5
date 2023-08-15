@@ -6,22 +6,23 @@ public class MoneyExchange{
   public static void main(String[] args) throws FileNotFoundException{
   Scanner console= new Scanner(new File("USD.txt"));
 	int x=0;
-	int repeat=0;
+	int repeat=1;
 //  do{
 	 Scanner scanner=new Scanner(System.in);
 	 Scanner opt=new Scanner(System.in);
 	 
 	System.out.println(" WELCOME!");
 	
-	do{
-	System.out.println("What currency would you like to exchange today, you can choose USD, EUR, GBP or JPY ?");
-    String choice=scanner.nextLine().toUpperCase();
-    //fix so that all string to capetal
-		if(choice!="USD"||choice!="EUR"||choice!="GBP"||choice!="JPY"){
+	//while(repeat==1){
+	System.out.println(" What currency would you like to exchange today, you can choose USD, EUR, GBP or JPY ?");
+    String choice=scanner.nextLine();
+
+    /*ix so that all string to capetal
+		if(choice=="USD"|choice=="EUR"|choice=="GBP"|choice=="JPY"){
 		      System.out.println(" Please input a valid choice!");
 		      repeat=1;
-		}else{
-			System.out.println(" Do you want to exchange it 1-USD, 2-EUR, 3-GBP, 4-JPY or 5-All?");  
+		}else{ */
+			System.out.println(" Do you want to exchange it to 1-USD, 2-EUR, 3-GBP, 4-JPY or 5-All?");  
 			int currency=opt.nextInt();  
 			System.out.println(" How much would you like to exchange today? ");    
 			double amount= opt.nextDouble();
@@ -38,13 +39,14 @@ public class MoneyExchange{
 			  exGBP(console,  currency, amount);
 			}
 			
-			System.out.println("Do you want exchange money again? Y or N");
+			/*System.out.println("Do you want exchange money again? Y or N");
 			  String go=opt.nextLine(); 
-			if(go.equals("Y")){
-					repeat=1;
+			if(go=="Y"){
+					repeat=0;
 			}
-		}
-    }while(repeat==1);
+			repeat=1;
+		
+    }*/
   }
    public static void exUSD(Scanner console, int currency, double amount){
   	double p=0.00;
@@ -158,5 +160,5 @@ public class MoneyExchange{
 		}
 	}    
     }
-}  
-    
+}
+  
