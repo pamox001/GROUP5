@@ -13,11 +13,12 @@ public class MoneyExchange{
 	 
 	System.out.println(" WELCOME!");
 	
-	//while(repeat==1){
+	while(repeat==1){
 	System.out.println(" What currency would you like to exchange today, you can choose USD, EUR, GBP or JPY ?");
     String choice=scanner.nextLine();
 
-    /*ix so that all string to capetal
+    /*USe .= for the strings
+     * ix so that all string to capetal
 		if(choice=="USD"|choice=="EUR"|choice=="GBP"|choice=="JPY"){
 		      System.out.println(" Please input a valid choice!");
 		      repeat=1;
@@ -29,7 +30,7 @@ public class MoneyExchange{
 		   // amount= new Scanner(System.in);
 		   
 		   
-			if(choice.equals("USD")){
+			if(choice.contains("USD")){
 			  exUSD(console,  currency, amount);
 			}else if(choice.equals("EUR")){
 			  exEUR(console,  currency, amount);
@@ -39,14 +40,16 @@ public class MoneyExchange{
 			  exGBP(console,  currency, amount);
 			}
 			
-			/*System.out.println("Do you want exchange money again? Y or N");
-			  String go=opt.nextLine(); 
-			if(go=="Y"){
+			System.out.println("Do you want exchange money again? Y or N");
+			  String go=opt.next(); 
+			if(go.contains("N")){
 					repeat=0;
+			}else{ 
+				repeat=1;
 			}
-			repeat=1;
+			
 		
-    }*/
+    }
   }
    public static void exUSD(Scanner console, int currency, double amount){
   	double p=0.00;
@@ -84,7 +87,7 @@ public class MoneyExchange{
 		String coin = console.next();
 		double count= console.nextDouble();
 		if(coin.equals("EUR")){
-			x=(1/count);
+			x=(1.00/count);
 			p=(amount*x);	//1.10	
 			if (coin.equals("GBP")){
 				n = (amount*count*x); //0.86
@@ -112,7 +115,7 @@ public class MoneyExchange{
 		String coin = console.next();
 		double count= console.nextDouble();
 		if(coin.equals("GBP")){
-			x=(1/count);
+			x=(1.00/count);
 			p=(amount*x);	//1.27	
 			if (coin.equals("EUR")){
 				n = (amount*count*x); //1.16
@@ -140,25 +143,25 @@ public class MoneyExchange{
 	while (console.hasNext()) {
 		String coin = console.next();
 		double count= console.nextDouble();
-		if(coin.equals("JPY")){
-			x=(1/count);
-			p=(amount*x);	//0.007
-			if (coin.equals("EUR")){
-				n = (amount*count*x); //0.0064
-			} else if (coin.equals("GBP")) {
-				d =(amount*count*x); //0.0055
+			if(coin.equals("JPY")){
+				x=(1.00/count);
+				p=(amount*x);	//0.007
+				if (coin.equals("EUR")){
+					n = (amount*count*x); //0.0064
+				} else if (coin.equals("GBP")) {
+					d =(amount*count*x); //0.0055
+				}
+			}	
+			if(currency==1){
+			System.out.println("JPY to USD: "+ p);
+			}else if(currency==2){
+			System.out.println("JPY to EUR: "+ n);
+			}else if(currency==3){
+			System.out.println("JPY to GBP: "+ d);
+			} else if(currency==5){
+			System.out.println("JPY to USD: "+ p+"  EUR: "+ n+"  GBP: "+d);
 			}
-		}	
-		if(currency==1){
-		System.out.println("JPY to USD: "+ p);
-		}else if(currency==2){
-		System.out.println("JPY to EUR: "+ n);
-		}else if(currency==3){
-		System.out.println("JPY to GBP: "+ d);
-		} else if(currency==5){
-		System.out.println("JPY to USD: "+ p+"  EUR: "+ n+"  GBP: "+d);
-		}
-	}    
+		}    
     }
 }
   
